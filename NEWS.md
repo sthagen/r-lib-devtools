@@ -1,6 +1,12 @@
 # devtools (development version)
 
+# devtools 2.3.0
+
+* `build()` now errors with a more informative error message when passed an
+  invalid `pkg`. (#2177)
+
 * New `build_rmd()` can build any `.Rmd` file in a clean session.
+
 * `dev_sitrep()` now works correctly when R is out of date (#2204)
 
 # devtools 2.2.2
