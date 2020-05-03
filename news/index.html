@@ -17,23 +17,27 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -43,8 +47,7 @@
 
 
 <meta property="og:title" content="Changelog" />
-<meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://devtools.r-lib.org/logo.svg" />
 
 
 
@@ -72,7 +75,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -86,7 +89,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">devtools</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.2.1.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.3.0.9000</span>
       </span>
     </div>
 
@@ -130,7 +133,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/r-lib/devtools">
+  <a href="https://github.com/r-lib/devtools/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -148,22 +151,51 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Changelog <small></small></h1>
+      <h1 data-toc-skip>Changelog <small></small></h1>
       <small>Source: <a href='https://github.com/r-lib/devtools/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
     <div id="devtools-development-version" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="development version">
 <a href="#devtools-development-version" class="anchor"></a>devtools (development version)<small> Unreleased </small>
 </h1>
 </div>
-    <div id="devtools-2-2-1" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-2-2-1" class="anchor"></a>devtools 2.2.1<small> 2019-09-24 </small>
+    <div id="devtools-230" class="section level1">
+<h1 class="page-header" data-toc-text="2.3.0">
+<a href="#devtools-230" class="anchor"></a>devtools 2.3.0<small> 2020-04-10 </small>
+</h1>
+<ul>
+<li><p><code><a href="../reference/build.html">build()</a></code> now errors with a more informative error message when passed an invalid <code>pkg</code>. (<a href='https://github.com/r-lib/devtools/issues/2177'>#2177</a>)</p></li>
+<li><p>New <code><a href="../reference/build_rmd.html">build_rmd()</a></code> can build any <code>.Rmd</code> file in a clean session.</p></li>
+<li><p><code><a href="../reference/dev_sitrep.html">dev_sitrep()</a></code> now works correctly when R is out of date (<a href='https://github.com/r-lib/devtools/issues/2204'>#2204</a>)</p></li>
+</ul>
+</div>
+    <div id="devtools-222" class="section level1">
+<h1 class="page-header" data-toc-text="2.2.2">
+<a href="#devtools-222" class="anchor"></a>devtools 2.2.2<small> 2020-02-17 </small>
+</h1>
+<ul>
+<li><p><code><a href="../reference/install_deps.html">install_dev_deps()</a></code> now passes formal args onto <code><a href="https://remotes.r-lib.org/reference/install_deps.html">remotes::install_deps()</a></code> (<a href='https://github.com/t-gibson'>@t-gibson</a>, <a href='https://github.com/r-lib/devtools/issues/2166'>#2166</a>)</p></li>
+<li><p><code><a href="../reference/spell_check.html">spell_check()</a></code> now checks if <code>spelling</code> is installed and prompts users to install it if not (<a href='https://github.com/mikemahoney218'>@mikemahoney218</a>, <a href='https://github.com/r-lib/devtools/issues/2172'>#2172</a>)</p></li>
+<li><p><code><a href="../reference/submit_cran.html">submit_cran()</a></code> now returns a more informative error when the CRAN submission portal is down (<a href='https://github.com/r-lib/devtools/issues/1958'>#1958</a>)</p></li>
+<li><p><code><a href="../reference/check.html">check()</a></code> gains a <code>vignettes</code> argument, to more easily disable checks for vignettes (<a href='https://github.com/r-lib/devtools/issues/2165'>#2165</a>).</p></li>
+<li><p><code>check_win_*()</code> function now resets the email to the original email after execution (<a href='https://github.com/muschellij2'>@muschellij2</a>, <a href='https://github.com/r-lib/devtools/issues/2152'>#2152</a>).</p></li>
+<li><p><code><a href="../reference/check.html">check()</a></code> now sets <code>NOT_CRAN=true</code> by default, as was originally intended (<a href='https://github.com/r-lib/devtools/issues/2135'>#2135</a>).</p></li>
+<li><p><code><a href="../reference/install_deps.html">install_deps()</a></code> now supports <code><a href="https://rdrr.io/r/base/options.html">options("devtools.ellipsis_action")</a></code> as well (<a href='https://github.com/r-lib/devtools/issues/2169'>#2169</a>)</p></li>
+<li><p><code><a href="../reference/test.html">test()</a></code> now takes <code>stop_on_failure</code> as a formal argument (FALSE by default) instead of in <code>...</code>. Its value is still passed to <code><a href="https://testthat.r-lib.org/reference/test_dir.html">testthat::test_dir</a></code> as before (<a href='https://github.com/infotroph'>@infotroph</a>, <a href='https://github.com/r-lib/devtools/issues/2129'>#2129</a>).</p></li>
+<li><p><code><a href="../reference/test.html">test()</a></code> and <code><a href="../reference/test.html">test_coverage_file()</a></code> gain a <code>export_all</code> argument, which controls if all functions in a package are automatically exported (<a href='https://github.com/r-lib/devtools/issues/1201'>#1201</a>).</p></li>
+<li><p><code><a href="../reference/dev_sitrep.html">dev_sitrep()</a></code> now works if run outside a package directory (<a href='https://github.com/r-lib/devtools/issues/2127'>#2127</a>).</p></li>
+<li><p><code><a href="../reference/release.html">release()</a></code> now works if the package root is not in the working directory.</p></li>
+</ul>
+</div>
+    <div id="devtools-221" class="section level1">
+<h1 class="page-header" data-toc-text="2.2.1">
+<a href="#devtools-221" class="anchor"></a>devtools 2.2.1<small> 2019-09-24 </small>
 </h1>
 <ul>
 <li><p><code><a href="../reference/test.html">test()</a></code> now sets the collation order to <code>C</code> before running, which matches the behavior of tests when run with <code>R CMD check</code> (<a href='https://github.com/r-lib/devtools/issues/2121'>#2121</a>)</p></li>
-<li>New <code><a href="https://rdrr.io/r/base/options.html">options("devtools.ellipsis_action")</a></code> option added to control the action of ellipsis in devtools. This should be one of
+<li>
+<p>New <code><a href="https://rdrr.io/r/base/options.html">options("devtools.ellipsis_action")</a></code> option added to control the action of ellipsis in devtools. This should be one of</p>
 <ul>
 <li>
 <code><a href="https://rlang.r-lib.org/reference/abort.html">rlang::abort</a></code> - to emit an error if arguments are unused</li>
@@ -178,12 +210,12 @@
 <li><p><code><a href="../reference/install.html">install()</a></code> now throws an error when it fails, as intended (<a href='https://github.com/r-lib/devtools/issues/2120'>#2120</a>)</p></li>
 <li><p><code><a href="../reference/install.html">install()</a></code> now again reloads and re-attaches packages if they were previously loaded (<a href='https://github.com/r-lib/devtools/issues/2111'>#2111</a>).</p></li>
 <li><p><code><a href="../reference/release.html">release()</a></code> no longer calls the deprecated <code><a href="../reference/devtools-deprecated.html">dr_devtools()</a></code> (<a href='https://github.com/r-lib/devtools/issues/2105'>#2105</a>)</p></li>
-<li><p><code><a href="../reference/test.html">test()</a></code> now explicitly passes <code>stop_on_failure = FALSE</code> to <code><a href="https://rdrr.io/pkg/testthat/man/test_dir.html">testthat::test_dir()</a></code> (<a href='https://github.com/jameslamb'>@jameslamb</a>, <a href='https://github.com/r-lib/devtools/issues/2099'>#2099</a>)</p></li>
+<li><p><code><a href="../reference/test.html">test()</a></code> now explicitly passes <code>stop_on_failure = FALSE</code> to <code><a href="https://testthat.r-lib.org/reference/test_dir.html">testthat::test_dir()</a></code> (<a href='https://github.com/jameslamb'>@jameslamb</a>, <a href='https://github.com/r-lib/devtools/issues/2099'>#2099</a>)</p></li>
 </ul>
 </div>
-    <div id="devtools-2-2-0" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-2-2-0" class="anchor"></a>devtools 2.2.0<small> 2019-09-07 </small>
+    <div id="devtools-220" class="section level1">
+<h1 class="page-header" data-toc-text="2.2.0">
+<a href="#devtools-220" class="anchor"></a>devtools 2.2.0<small> 2019-09-07 </small>
 </h1>
 <div id="new-features" class="section level2">
 <h2 class="hasAnchor">
@@ -208,16 +240,15 @@
 <li><p>All <code>install_*()</code> functions now attach build tools to the PATH, which makes them work on Windows when RTools is not on the default PATH (<a href='https://github.com/r-lib/devtools/issues/2093'>#2093</a>).</p></li>
 <li><p><code><a href="../reference/test.html">test_coverage_file()</a></code> now works when there is not a 1 to 1 correspondence between test and source files (<a href='https://github.com/r-lib/devtools/issues/2011'>#2011</a>).</p></li>
 <li><p><code><a href="../reference/release.html">release()</a></code> now works again when <code>pkg</code> is not the current working directory (<a href='https://github.com/r-lib/devtools/issues/1974'>#1974</a>).</p></li>
-<li>
-<code><a href="../reference/release.html">release()</a></code> now works without error when <code><a href="https://rdrr.io/r/base/options.html">options("repos")</a></code> is unnamed (<a href='https://github.com/r-lib/devtools/issues/1956'>#1956</a>).</li>
+<li><p><code><a href="../reference/release.html">release()</a></code> now works without error when <code><a href="https://rdrr.io/r/base/options.html">options("repos")</a></code> is unnamed (<a href='https://github.com/r-lib/devtools/issues/1956'>#1956</a>).</p></li>
 <li><p><code><a href="../reference/create.html">create()</a></code> added, the RStudio IDE uses <code><a href="../reference/create.html">create()</a></code>, so removing it in version 2.1.0 broke old versions of the IDE.</p></li>
 <li><p>In several places <code>http:</code> URLs were used instead of <code>https:</code>, the most critical being in the <code>cran_mirror</code>, <code>cran_pacakges</code>, and <code>cran_submission_url</code> values which could have enabled discrete activity disclosure and person-in-the-middle attacks (i.e. changing the contents while uploading/downloading). All <code>http:</code> URLS have been changed to <code>https:</code> URLs. (<a href='https://github.com/hrbrmstr'>@hrbrmstr</a>, <a href='https://github.com/r-lib/devtools/issues/2091'>#2091</a>)</p></li>
 </ul>
 </div>
 </div>
-    <div id="devtools-2-1-0" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-2-1-0" class="anchor"></a>devtools 2.1.0<small> 2019-07-06 </small>
+    <div id="devtools-210" class="section level1">
+<h1 class="page-header" data-toc-text="2.1.0">
+<a href="#devtools-210" class="anchor"></a>devtools 2.1.0<small> 2019-07-06 </small>
 </h1>
 <div id="new-features-1" class="section level2">
 <h2 class="hasAnchor">
@@ -248,9 +279,9 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-2-0-2" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-2-0-2" class="anchor"></a>devtools 2.0.2<small> 2019-04-08 </small>
+    <div id="devtools-202" class="section level1">
+<h1 class="page-header" data-toc-text="2.0.2">
+<a href="#devtools-202" class="anchor"></a>devtools 2.0.2<small> 2019-04-08 </small>
 </h1>
 <ul>
 <li><p>Two tests are now skipped when run on CRAN, as they fail due to an outdated pandoc and restrictions on writing to the package library respectively.</p></li>
@@ -259,32 +290,32 @@
 <li><p><code><a href="../reference/check.html">check()</a></code> now replaces existing environment variables rather than appending them (<a href='https://github.com/r-lib/devtools/issues/1914'>#1914</a>).</p></li>
 </ul>
 </div>
-    <div id="devtools-2-0-1" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-2-0-1" class="anchor"></a>devtools 2.0.1<small> 2018-10-26 </small>
+    <div id="devtools-201" class="section level1">
+<h1 class="page-header" data-toc-text="2.0.1">
+<a href="#devtools-201" class="anchor"></a>devtools 2.0.1<small> 2018-10-26 </small>
 </h1>
 <p>This is a minor release mainly fixing bugs which snuck through in the devtools 2.0.0 release.</p>
 <ul>
-<li><p><code><a href="../reference/install.html">install()</a></code> now correctly passes the <code>upgrade</code> parameter to <code><a href="https://rdrr.io/pkg/remotes/man/install_deps.html">remotes::install_deps()</a></code> (<a href='https://github.com/Paxanator'>@Paxanator</a>, <a href='https://github.com/r-lib/devtools/issues/1898'>#1898</a>).</p></li>
+<li><p><code><a href="../reference/install.html">install()</a></code> now correctly passes the <code>upgrade</code> parameter to <code><a href="https://remotes.r-lib.org/reference/install_deps.html">remotes::install_deps()</a></code> (<a href='https://github.com/Paxanator'>@Paxanator</a>, <a href='https://github.com/r-lib/devtools/issues/1898'>#1898</a>).</p></li>
 <li><p><code><a href="../reference/install_deps.html">install_deps()</a></code> now again works from any directory within a package (<a href='https://github.com/r-lib/devtools/issues/1905'>#1905</a>)</p></li>
 <li><p>Add a RStudio addin for <code><a href="../reference/test.html">test_coverage()</a></code>.</p></li>
 <li><p>All tests which use remote resources are now skipped on CRAN, to avoid spurious failures</p></li>
 </ul>
 </div>
-    <div id="devtools-2-0-0" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-2-0-0" class="anchor"></a>devtools 2.0.0<small> 2018-10-19 </small>
+    <div id="devtools-200" class="section level1">
+<h1 class="page-header" data-toc-text="2.0.0">
+<a href="#devtools-200" class="anchor"></a>devtools 2.0.0<small> 2018-10-19 </small>
 </h1>
 <p>Devtools 2.0.0 is a <em>major</em> release that contains work from the past year and a half, since the major devtools release (1.13.0).</p>
 <p>This release splits the functionality in <strong>devtools</strong> into a number of smaller packages which are simpler to develop and also easier for other packages to depend on. In particular the following packages have been spun off in what we are calling the ‘conscious uncoupling’ of <strong>devtools</strong>.</p>
 <ul>
-<li>remotes: Installing packages (i.e. <code><a href="../reference/remote-reexports.html">install_github()</a></code>).</li>
-<li>pkgbuild: Building binary packages (including checking if build tools are available) (i.e. <code><a href="../reference/build.html">build()</a></code>).</li>
-<li>pkgload: Simulating package loading (i.e. <code><a href="../reference/load_all.html">load_all()</a></code>).</li>
-<li>rcmdcheck: Running R CMD check and reporting the results (i.e. <code><a href="../reference/check.html">check()</a></code>).</li>
-<li>revdepcheck: Running R CMD check on all reverse dependencies, and figuring out what’s changed since the last CRAN release (i.e. <code>revdep_check()</code>).</li>
-<li>sessioninfo: R session info (i.e. <code><a href="https://rdrr.io/pkg/sessioninfo/man/session_info.html">session_info()</a></code>).</li>
-<li>usethis: Automating package setup (i.e. <code>use_test()</code>).</li>
+<li>remotes: Installing packages (i.e. <code><a href="../reference/remote-reexports.html">install_github()</a></code>).</li>
+<li>pkgbuild: Building binary packages (including checking if build tools are available) (i.e. <code><a href="../reference/build.html">build()</a></code>).</li>
+<li>pkgload: Simulating package loading (i.e. <code><a href="../reference/load_all.html">load_all()</a></code>).</li>
+<li>rcmdcheck: Running R CMD check and reporting the results (i.e. <code><a href="../reference/check.html">check()</a></code>).</li>
+<li>revdepcheck: Running R CMD check on all reverse dependencies, and figuring out what’s changed since the last CRAN release (i.e. <code>revdep_check()</code>).</li>
+<li>sessioninfo: R session info (i.e. <code><a href="https://rdrr.io/pkg/sessioninfo/man/session_info.html">session_info()</a></code>).</li>
+<li>usethis: Automating package setup (i.e. <code>use_test()</code>).</li>
 </ul>
 <p>devtools will remain the main package developers will interact with when writing R packages; it will just rely on these other packages internally for most of the functionality.</p>
 <div id="breaking-changes" class="section level2">
@@ -293,7 +324,7 @@
 <p>There have been a number of breaking changes in this release, while this will cause some short term pain for users it will result in a easier to understand API in the future, so we feel the tradeoff is worthwhile.</p>
 <ul>
 <li>
-<code><a href="../reference/install.html">devtools::install()</a></code> arguments have been changed as follows.
+<p><code><a href="../reference/install.html">devtools::install()</a></code> arguments have been changed as follows.</p>
 <ul>
 <li>
 <code>local</code> -&gt; <code>build</code>
@@ -337,7 +368,7 @@
 <a href="#major-changes" class="anchor"></a>Major changes</h2>
 <ul>
 <li><p>All <code>install_*()</code> functions are now re-exported from <strong>remotes</strong> rather than being defined in <strong>devtools</strong></p></li>
-<li><p><strong>devtools</strong> now depends on <strong>roxygen2</strong> 6.1.0: this considerably simplifies <code><a href="../reference/document.html">devtools::document()</a></code> and makes it more consistent with <code><a href="https://rdrr.io/pkg/roxygen2/man/roxygenize.html">roxygen2::roxygenise()</a></code>.</p></li>
+<li><p><strong>devtools</strong> now depends on <strong>roxygen2</strong> 6.1.0: this considerably simplifies <code><a href="../reference/document.html">devtools::document()</a></code> and makes it more consistent with <code><a href="https://roxygen2.r-lib.org/reference/roxygenize.html">roxygen2::roxygenise()</a></code>.</p></li>
 <li><p><code><a href="../reference/test.html">test_file()</a></code> function added to test one or more files from a package (<a href='https://github.com/r-lib/devtools/issues/1755'>#1755</a>).</p></li>
 <li><p><code><a href="../reference/test.html">test_coverage()</a></code> function added to provide a helper to compute test coverage using <strong>covr</strong> (<a href='https://github.com/r-lib/devtools/issues/1628'>#1628</a>).</p></li>
 <li><p><code><a href="../reference/test.html">test_file()</a></code> and <code><a href="../reference/test.html">test_coverage_file()</a></code> now have RStudio addins (<a href='https://github.com/r-lib/devtools/issues/1650'>#1650</a>)</p></li>
@@ -369,11 +400,11 @@
 <li><p><code>remote_sha.github()</code> now correctly looks up SHA in private repositories (<a href='https://github.com/r-lib/devtools/issues/1827'>#1827</a>, <a href='https://github.com/renozao'>@renozao</a>).</p></li>
 <li><p><strong>devtools</strong> <code>use_*()</code> functions now temporarily set the active <strong>usethis</strong> project if given a pkg argument that is not the current directory. This provides backwards compatibility with previous behavior (<a href='https://github.com/r-lib/devtools/issues/1823'>#1823</a>).</p></li>
 <li><p>Vignettes are now built in a separate process, and the package is installed before building the vignettes (<a href='https://github.com/r-lib/devtools/issues/1822'>#1822</a>)</p></li>
-<li><p><code><a href="../reference/build_readme.html">build_readme()</a></code> added to build the README.md from a README.Rmd (<a href='https://github.com/r-lib/devtools/issues/1762'>#1762</a>)</p></li>
+<li><p><code><a href="../reference/build_rmd.html">build_readme()</a></code> added to build the README.md from a README.Rmd (<a href='https://github.com/r-lib/devtools/issues/1762'>#1762</a>)</p></li>
 <li><p><code><a href="../reference/build_vignettes.html">build_vignettes()</a></code> now has a <code>clean</code> and <code>upgrade</code> arguments, to control cleaning of intermediate files and upgrading vignette dependencies respectively. (<a href='https://github.com/r-lib/devtools/issues/1770'>#1770</a>).</p></li>
 <li><p><code><a href="../reference/release.html">release()</a></code> gains an additional question ensuring you updated codemeta.json if one exists (<a href='https://github.com/r-lib/devtools/issues/1774'>#1774</a>, <a href='https://github.com/r-lib/devtools/issues/1754'>#1754</a>)</p></li>
 <li><p><code><a href="../reference/test.html">test()</a></code> now sets <code>useFancyQuotes = FALSE</code> to better mimic the environment tests are run under with <code>R CMD check</code> (<a href='https://github.com/r-lib/devtools/issues/1735'>#1735</a>).</p></li>
-<li><p><code><a href="../reference/test.html">test()</a></code> no longer passes encoding argument to <code><a href="https://rdrr.io/pkg/testthat/man/test_dir.html">testthat::test_dir()</a></code> (<a href='https://github.com/r-lib/devtools/issues/1776'>#1776</a>)</p></li>
+<li><p><code><a href="../reference/test.html">test()</a></code> no longer passes encoding argument to <code><a href="https://testthat.r-lib.org/reference/test_dir.html">testthat::test_dir()</a></code> (<a href='https://github.com/r-lib/devtools/issues/1776'>#1776</a>)</p></li>
 <li><p><code><a href="../reference/remote-reexports.html">install_url()</a></code> can now install package binaries on windows (<a href='https://github.com/r-lib/devtools/issues/1765'>#1765</a>)</p></li>
 <li><p>Fix skipping when installing from a full SHA (<a href='https://github.com/r-lib/devtools/issues/1624'>#1624</a>)</p></li>
 <li><p>add <code><a href="https://pkgdown.r-lib.org/reference/build_site.html">pkgdown::build_site()</a></code> wrapper (<a href='https://github.com/kiwiroy'>@kiwiroy</a>, <a href='https://github.com/r-lib/devtools/issues/1777'>#1777</a>)</p></li>
@@ -401,41 +432,41 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-1-13-5" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-13-5" class="anchor"></a>devtools 1.13.5<small> 2018-02-18 </small>
+    <div id="devtools-1135" class="section level1">
+<h1 class="page-header" data-toc-text="1.13.5">
+<a href="#devtools-1135" class="anchor"></a>devtools 1.13.5<small> 2018-02-18 </small>
 </h1>
 <ul>
 <li>Fix two test errors related to GitHub rate limiting and mocking base functions.</li>
 </ul>
 </div>
-    <div id="devtools-1-13-4" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-13-4" class="anchor"></a>devtools 1.13.4<small> 2017-11-09 </small>
+    <div id="devtools-1134" class="section level1">
+<h1 class="page-header" data-toc-text="1.13.4">
+<a href="#devtools-1134" class="anchor"></a>devtools 1.13.4<small> 2017-11-09 </small>
 </h1>
 <ul>
 <li>Fix test errors for upcoming testthat release.</li>
 </ul>
 </div>
-    <div id="devtools-1-13-3" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-13-3" class="anchor"></a>devtools 1.13.3<small> 2017-08-02 </small>
+    <div id="devtools-1133" class="section level1">
+<h1 class="page-header" data-toc-text="1.13.3">
+<a href="#devtools-1133" class="anchor"></a>devtools 1.13.3<small> 2017-08-02 </small>
 </h1>
 <ul>
 <li>Workaround a change in how Rcpp::compileAttributes stores the symbol names that broke tests.</li>
 </ul>
 </div>
-    <div id="devtools-1-13-2" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-13-2" class="anchor"></a>devtools 1.13.2<small> 2017-06-02 </small>
+    <div id="devtools-1132" class="section level1">
+<h1 class="page-header" data-toc-text="1.13.2">
+<a href="#devtools-1132" class="anchor"></a>devtools 1.13.2<small> 2017-06-02 </small>
 </h1>
 <ul>
 <li>Workaround a regression in Rcpp::compileAttributes. Add trimws implementation for R 3.1 support.</li>
 </ul>
 </div>
-    <div id="devtools-1-13-1" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-13-1" class="anchor"></a>devtools 1.13.1<small> 2017-05-13 </small>
+    <div id="devtools-1131" class="section level1">
+<h1 class="page-header" data-toc-text="1.13.1">
+<a href="#devtools-1131" class="anchor"></a>devtools 1.13.1<small> 2017-05-13 </small>
 </h1>
 <ul>
 <li><p>Bugfix for installing from git remote and not passing git2r credentials (<a href='https://github.com/james-atkins'>@james-atkins</a>, <a href='https://github.com/r-lib/devtools/issues/1498'>#1498</a>)</p></li>
@@ -447,9 +478,9 @@
 <li><p>Fix <code><a href="../reference/remote-reexports.html">install_version()</a></code>, <code><a href="../reference/remote-reexports.html">install_bitbucket()</a></code>, <code><a href="../reference/remote-reexports.html">install_local()</a></code>, <code><a href="../reference/remote-reexports.html">install_url()</a></code>, <code><a href="../reference/remote-reexports.html">install_svn()</a></code>, <code><a href="../reference/remote-reexports.html">install_bioc()</a></code> gain <code>quiet</code> arguments and properly pass them to internal functions. (<a href='https://github.com/r-lib/devtools/issues/1502'>#1502</a>)</p></li>
 </ul>
 </div>
-    <div id="devtools-1-13-0" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-13-0" class="anchor"></a>devtools 1.13.0<small> 2017-05-08 </small>
+    <div id="devtools-1130" class="section level1">
+<h1 class="page-header" data-toc-text="1.13.0">
+<a href="#devtools-1130" class="anchor"></a>devtools 1.13.0<small> 2017-05-08 </small>
 </h1>
 <div id="new-features-2" class="section level2">
 <h2 class="hasAnchor">
@@ -505,14 +536,14 @@
 <li><p><code>use_readme_rmd()</code> and <code>use_readme()</code> share a common template with sections for package overview, GitHub installation (if applicable), and an example (<a href='https://github.com/jennybc'>@jennybc</a>, <a href='https://github.com/r-lib/devtools/issues/1287'>#1287</a>).</p></li>
 <li><p><code><a href="../reference/test.html">test()</a></code> doesn’t load helpers twice anymore (<a href='https://github.com/krlmlr'>@krlmlr</a>, <a href='https://github.com/r-lib/devtools/issues/1256'>#1256</a>).</p></li>
 <li><p>Fix auto download method selection for <code><a href="../reference/remote-reexports.html">install_github()</a></code> on R 3.1 which lacks “libcurl” in <code><a href="https://rdrr.io/r/base/capabilities.html">capabilities()</a></code>. (<a href='https://github.com/kiwiroy'>@kiwiroy</a>, <a href='https://github.com/r-lib/devtools/issues/1244'>#1244</a>)</p></li>
-<li>Fix removal of vignette files by not trying to remove files twice anymore (<a href='https://github.com/r-lib/devtools/issues/1291'>#1291</a>)</li>
+<li><p>Fix removal of vignette files by not trying to remove files twice anymore (<a href='https://github.com/r-lib/devtools/issues/1291'>#1291</a>)</p></li>
 <li><p>add timestamp to messages in <code>build_win()</code> (<a href='https://github.com/achubaty'>@achubaty</a>, <a href='https://github.com/r-lib/devtools/issues/1367'>#1367</a>).</p></li>
 </ul>
 </div>
 </div>
-    <div id="devtools-1-12-0" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-12-0" class="anchor"></a>devtools 1.12.0<small> 2016-06-24 </small>
+    <div id="devtools-1120" class="section level1">
+<h1 class="page-header" data-toc-text="1.12.0">
+<a href="#devtools-1120" class="anchor"></a>devtools 1.12.0<small> 2016-06-24 </small>
 </h1>
 <div id="new-features-3" class="section level2">
 <h2 class="hasAnchor">
@@ -546,17 +577,17 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-1-11-1" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-11-1" class="anchor"></a>devtools 1.11.1<small> 2016-04-21 </small>
+    <div id="devtools-1111" class="section level1">
+<h1 class="page-header" data-toc-text="1.11.1">
+<a href="#devtools-1111" class="anchor"></a>devtools 1.11.1<small> 2016-04-21 </small>
 </h1>
 <ul>
 <li>Bug fix in <code>search_path_for_rtools()</code> using the gcc-4.9.3 toolchain when there is no rtools setting in the windows registry. (<a href='https://github.com/jimhester'>@jimhester</a>, <a href='https://github.com/r-lib/devtools/issues/1155'>#1155</a>)</li>
 </ul>
 </div>
-    <div id="devtools-1-11-0" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-11-0" class="anchor"></a>devtools 1.11.0<small> 2016-04-12 </small>
+    <div id="devtools-1110" class="section level1">
+<h1 class="page-header" data-toc-text="1.11.0">
+<a href="#devtools-1110" class="anchor"></a>devtools 1.11.0<small> 2016-04-12 </small>
 </h1>
 <div id="infrastructure-helpers" class="section level2">
 <h2 class="hasAnchor">
@@ -586,7 +617,7 @@
 <li><p><code><a href="../reference/check.html">check_built()</a></code> allows you to run <code>R CMD check</code> on an already built package.</p></li>
 <li><p><code>check_cran()</code> suppresses X11 with <code>DISPLAY = ""</code>.</p></li>
 <li><p><code><a href="../reference/release.html">release()</a></code> has been tweaked to improve the order of the questions, and to ensure that you’re ok with problems. It warns if both <code>inst/NEWS.Rd</code> and <code>NEWS.md</code> exist (<a href='https://github.com/krlmlr'>@krlmlr</a>, <a href='https://github.com/r-lib/devtools/issues/1135'>#1135</a>), doesn’t throw error if Git head is detached (<a href='https://github.com/krlmlr'>@krlmlr</a>, <a href='https://github.com/r-lib/devtools/issues/1136'>#1136</a>).</p></li>
-<li><p><code><a href="../reference/release.html">release()</a></code> gains an <code>args</code> argument to control build options, e.g. to allow passing <code>args = "--compact-vignettes=both"</code> for packages with heavy PDF vignettes (<a href='https://github.com/krlmlr'>@krlmlr</a>, <a href='https://github.com/r-lib/devtools/issues/1077'>#1077</a>).</p></li>
+<li><p><code><a href="../reference/release.html">release()</a></code> gains an <code>args</code> argument to control build options, e.g. to allow passing <code>args = "--compact-vignettes=both"</code> for packages with heavy PDF vignettes (<a href='https://github.com/krlmlr'>@krlmlr</a>, <a href='https://github.com/r-lib/devtools/issues/1077'>#1077</a>).</p></li>
 <li><p><code>system_check()</code> gains new arguments <code>path</code> to controls the working directory of the command, and <code>throw</code> to control whether or not it throws an error on command failure. <code>env</code> has been renamed to the more explicit <code>env_vars</code>.</p></li>
 </ul>
 </div>
@@ -619,9 +650,9 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-1-10-0" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-10-0" class="anchor"></a>devtools 1.10.0<small> 2016-01-23 </small>
+    <div id="devtools-1100" class="section level1">
+<h1 class="page-header" data-toc-text="1.10.0">
+<a href="#devtools-1100" class="anchor"></a>devtools 1.10.0<small> 2016-01-23 </small>
 </h1>
 <div id="new-features-4" class="section level2">
 <h2 class="hasAnchor">
@@ -683,13 +714,13 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-1-9-1" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-9-1" class="anchor"></a>devtools 1.9.1<small> 2015-09-11 </small>
+    <div id="devtools-191" class="section level1">
+<h1 class="page-header" data-toc-text="1.9.1">
+<a href="#devtools-191" class="anchor"></a>devtools 1.9.1<small> 2015-09-11 </small>
 </h1>
 <ul>
 <li><p>Avoid importing heavy dependencies to speed up loading (<a href='https://github.com/r-lib/devtools/issues/830'>#830</a>, <a href='https://github.com/krlmlr'>@krlmlr</a>).</p></li>
-<li><p>Remove explicit <code><a href="https://rdrr.io/r/base/library.html">library(testthat)</a></code> call in <code><a href="../reference/test.html">test()</a></code> (<a href='https://github.com/r-lib/devtools/issues/798'>#798</a>, <a href='https://github.com/krlmlr'>@krlmlr</a>).</p></li>
+<li><p>Remove explicit <code><a href="https://testthat.r-lib.org/reference">library(testthat)</a></code> call in <code><a href="../reference/test.html">test()</a></code> (<a href='https://github.com/r-lib/devtools/issues/798'>#798</a>, <a href='https://github.com/krlmlr'>@krlmlr</a>).</p></li>
 <li><p><code><a href="../reference/as.package.html">as.package()</a></code> and <code><a href="../reference/load_all.html">load_all()</a></code> gain new argument <code>create</code>. Like other functions with a <code>pkg</code> argument, <code><a href="../reference/load_all.html">load_all()</a></code> looks for a <code>DESCRIPTION</code> file in parent directories - if <code>create = TRUE</code> it will be automatically created if there’s a <code>R/</code> or <code>data/</code> directory (<a href='https://github.com/r-lib/devtools/issues/852'>#852</a>, <a href='https://github.com/krlmlr'>@krlmlr</a>).</p></li>
 <li><p><code><a href="../reference/build_vignettes.html">build_vignettes()</a></code> gains dependencies argument (<a href='https://github.com/r-lib/devtools/issues/825'>#825</a>, <a href='https://github.com/krlmlr'>@krlmlr</a>).</p></li>
 <li><p><code>build_win()</code> now uses <code>curl</code> instead of <code>RCurl</code> for ftp upload.</p></li>
@@ -718,9 +749,9 @@
 <li><p><code><a href="../reference/load_all.html">load_all()</a></code> warns (instead of failing) if importing symbols, methods, or classes from <code>NAMESPACE</code> fails (<a href='https://github.com/krlmlr'>@krlmlr</a>, <a href='https://github.com/r-lib/devtools/issues/921'>#921</a>).</p></li>
 </ul>
 </div>
-    <div id="devtools-1-8-0" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-8-0" class="anchor"></a>devtools 1.8.0<small> 2015-05-09 </small>
+    <div id="devtools-180" class="section level1">
+<h1 class="page-header" data-toc-text="1.8.0">
+<a href="#devtools-180" class="anchor"></a>devtools 1.8.0<small> 2015-05-09 </small>
 </h1>
 <div id="helpers" class="section level2">
 <h2 class="hasAnchor">
@@ -768,17 +799,17 @@
 <li><p><code><a href="../reference/release.html">release()</a></code> now reminds you to check the existing CRAN check results page (<a href='https://github.com/r-lib/devtools/issues/613'>#613</a>) and shows file size before uploading to CRAN (<a href='https://github.com/r-lib/devtools/issues/683'>#683</a>, <a href='https://github.com/krlmlr'>@krlmlr</a>).</p></li>
 <li><p><code>RCMD()</code> and <code>system_check()</code> are now exported so they can be used by other packages. (<a href='https://github.com/jimhester'>@jimhester</a>, <a href='https://github.com/r-lib/devtools/issues/699'>#699</a>).</p></li>
 <li><p><code>revdep_check()</code> creates directories if needed (<a href='https://github.com/r-lib/devtools/issues/759'>#759</a>).</p></li>
-<li><p><code>system_check()</code> combines arguments with ` <code>, not</code>, `. (<a href='https://github.com/r-lib/devtools/issues/753'>#753</a>)</p></li>
-<li><p><code><a href="../reference/test.html">test()</a></code> gains an <code>...</code> argument so that additional arguments can be passed to <code><a href="https://rdrr.io/pkg/testthat/man/test_dir.html">testthat::test_dir</a></code> (<a href='https://github.com/jimhester'>@jimhester</a>, <a href='https://github.com/r-lib/devtools/issues/747'>#747</a>)</p></li>
+<li><p><code>system_check()</code> combines arguments with <code></code>, not <code>,</code>. (<a href='https://github.com/r-lib/devtools/issues/753'>#753</a>)</p></li>
+<li><p><code><a href="../reference/test.html">test()</a></code> gains an <code>...</code> argument so that additional arguments can be passed to <code><a href="https://testthat.r-lib.org/reference/test_dir.html">testthat::test_dir</a></code> (<a href='https://github.com/jimhester'>@jimhester</a>, <a href='https://github.com/r-lib/devtools/issues/747'>#747</a>)</p></li>
 <li><p><code>use_travis()</code> now suggests you link to the svg icon since that looks a little sharper. Default template sets <code>CRAN: http://cran.rstudio.com/</code> to enable the cyclic dependency check.</p></li>
 <li><p><code>NOT_CRAN</code> envvar no longer overrides externally set variable.</p></li>
 <li><p><code><a href="../reference/check.html">check(check_version = TRUE)</a></code> also checks spelling of the <code>DESCRIPTION</code>; if no spell checker is installed, a warning is given (<a href='https://github.com/r-lib/devtools/issues/784'>#784</a>, <a href='https://github.com/krlmlr'>@krlmlr</a>).</p></li>
 </ul>
 </div>
 </div>
-    <div id="devtools-1-7-0" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-7-0" class="anchor"></a>devtools 1.7.0<small> 2015-01-17 </small>
+    <div id="devtools-170" class="section level1">
+<h1 class="page-header" data-toc-text="1.7.0">
+<a href="#devtools-170" class="anchor"></a>devtools 1.7.0<small> 2015-01-17 </small>
 </h1>
 <div id="improve-reverse-dependency-checking" class="section level2">
 <h2 class="hasAnchor">
@@ -804,7 +835,7 @@
 <ul>
 <li><p>Deprecated <code>doc_clean</code> argument to <code><a href="../reference/check.html">check()</a></code> has been removed.</p></li>
 <li><p>Initial package version in <code><a href="../reference/create.html">create()</a></code> is now <code>0.0.0.9000</code> (<a href='https://github.com/r-lib/devtools/issues/632'>#632</a>). <code><a href="../reference/create.html">create()</a></code> and <code>create_description()</code> checks that the package name is valid (<a href='https://github.com/r-lib/devtools/issues/610'>#610</a>).</p></li>
-<li><p><code><a href="../reference/load_all.html">load_all()</a></code> runs <code><a href="https://rdrr.io/pkg/roxygen2/man/update_collate.html">roxygen2::update_collate()</a></code> before loading code. This ensures that files are sourced in the way you expect, as defined by roxygen <code>@include</code> tags. If you don’t have any <code>@include</code> tags, the collate will be not be touched (<a href='https://github.com/r-lib/devtools/issues/623'>#623</a>).</p></li>
+<li><p><code><a href="../reference/load_all.html">load_all()</a></code> runs <code><a href="https://roxygen2.r-lib.org/reference/update_collate.html">roxygen2::update_collate()</a></code> before loading code. This ensures that files are sourced in the way you expect, as defined by roxygen <code>@include</code> tags. If you don’t have any <code>@include</code> tags, the collate will be not be touched (<a href='https://github.com/r-lib/devtools/issues/623'>#623</a>).</p></li>
 <li><p><code><a href="https://rdrr.io/pkg/sessioninfo/man/session_info.html">session_info()</a></code> gains <code>include_base</code> argument to also display loaded/attached base packages (<a href='https://github.com/r-lib/devtools/issues/646'>#646</a>).</p></li>
 <li>
 <p><code><a href="../reference/release.html">release()</a></code> no longer asks if you’ve read the CRAN policies since the CRAN submission process now asks the same question (<a href='https://github.com/r-lib/devtools/issues/692'>#692</a>).</p>
@@ -827,13 +858,13 @@
 <li><p>When installing a pull request, <code><a href="../reference/remote-reexports.html">install_github()</a></code> now uses the repository associated with the pull request’s branch (and not the repository of the user who created the pull request) (<a href='https://github.com/r-lib/devtools/issues/658'>#658</a>, <a href='https://github.com/krlmlr'>@krlmlr</a>).</p></li>
 <li><p><code><a href="../reference/missing_s3.html">missing_s3()</a></code> works once again (<a href='https://github.com/r-lib/devtools/issues/672'>#672</a>)</p></li>
 <li><p>Fixed scoping issues with <code><a href="https://rdrr.io/r/utils/unzip.html">unzip()</a></code>.</p></li>
-<li><p><code>load_code()</code> now executes the package’s code with the package’s root as working directory, just like <code>R CMD build</code> et al. (<a href='https://github.com/r-lib/devtools/issues/640'>#640</a>, <a href='https://github.com/krlmlr'>@krlmlr</a>).</p></li>
+<li><p><code>load_code()</code> now executes the package’s code with the package’s root as working directory, just like <code>R CMD build</code> et al. (<a href='https://github.com/r-lib/devtools/issues/640'>#640</a>, <a href='https://github.com/krlmlr'>@krlmlr</a>).</p></li>
 </ul>
 </div>
 </div>
-    <div id="devtools-1-6-1" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-6-1" class="anchor"></a>devtools 1.6.1<small> 2014-10-07 </small>
+    <div id="devtools-161" class="section level1">
+<h1 class="page-header" data-toc-text="1.6.1">
+<a href="#devtools-161" class="anchor"></a>devtools 1.6.1<small> 2014-10-07 </small>
 </h1>
 <ul>
 <li><p>Don’t set non-portable compiler flags on Solaris.</p></li>
@@ -842,9 +873,9 @@
 <li><p>The functions <code>test</code>, <code>document</code>, <code>load_all</code>, <code>build</code>, <code>check</code> and any function that applies to some package directory will work from subdirectories of a package (like the “R” or “inst/tests” directories). (<a href='https://github.com/r-lib/devtools/issues/616'>#616</a>, <a href='https://github.com/robertzk'>@robertzk</a>)</p></li>
 </ul>
 </div>
-    <div id="devtools-1-6" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-6" class="anchor"></a>devtools 1.6<small> 2014-09-23 </small>
+    <div id="devtools-16" class="section level1">
+<h1 class="page-header" data-toc-text="1.6">
+<a href="#devtools-16" class="anchor"></a>devtools 1.6<small> 2014-09-23 </small>
 </h1>
 <div id="tool-templates-and-create" class="section level2">
 <h2 class="hasAnchor">
@@ -905,7 +936,7 @@
 <li><p><code>check_devtools()</code> also checks for dependencies on development versions of packages (<a href='https://github.com/r-lib/devtools/issues/534'>#534</a>).</p></li>
 <li><p><code><a href="../reference/load_all.html">load_all()</a></code> no longer fails on partial loading of a package containing S4 or RC classes (<a href='https://github.com/r-lib/devtools/issues/577'>#577</a>).</p></li>
 <li><p>On windows, <code><a href="https://rdrr.io/pkg/pkgbuild/man/has_rtools.html">find_rtools()</a></code> is now run on package load, not package attach.</p></li>
-<li><p><code><a href="https://rdrr.io/r/utils/help.html">help()</a></code>, <code>?</code>, and <code><a href="https://rdrr.io/r/base/system.file.html">system.file()</a></code> are now made available when a package is loaded with <code><a href="../reference/load_all.html">load_all()</a></code>, even if the devtools package isn’t attached.</p></li>
+<li><p><code>help()</code>, <code>?</code>, and <code><a href="https://rdrr.io/r/base/system.file.html">system.file()</a></code> are now made available when a package is loaded with <code><a href="../reference/load_all.html">load_all()</a></code>, even if the devtools package isn’t attached.</p></li>
 <li><p><code>httr</code> 0.3 required (<a href='https://github.com/krlmlr'>@krlmlr</a>, <a href='https://github.com/r-lib/devtools/issues/466'>#466</a>).</p></li>
 <li><p><code><a href="../reference/load_all.html">load_all()</a></code> no longer gives an error when objects listed as exports are missing.</p></li>
 <li><p>Shim added for <code><a href="https://rdrr.io/r/base/library.dynam.html">library.dynam.unload()</a></code>.</p></li>
@@ -927,9 +958,9 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-1-5" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-5" class="anchor"></a>devtools 1.5<small> 2014-04-07 </small>
+    <div id="devtools-15" class="section level1">
+<h1 class="page-header" data-toc-text="1.5">
+<a href="#devtools-15" class="anchor"></a>devtools 1.5<small> 2014-04-07 </small>
 </h1>
 <p>Four new functions make it easier to add useful infrastructure to packages:</p>
 <ul>
@@ -975,9 +1006,9 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-1-4-1" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-4-1" class="anchor"></a>devtools 1.4.1<small> 2013-11-27 </small>
+    <div id="devtools-141" class="section level1">
+<h1 class="page-header" data-toc-text="1.4.1">
+<a href="#devtools-141" class="anchor"></a>devtools 1.4.1<small> 2013-11-27 </small>
 </h1>
 <ul>
 <li><p>Fixed bug in <code><a href="../reference/wd.html">wd()</a></code> when <code>path</code> was omitted. (<a href='https://github.com/r-lib/devtools/issues/374'>#374</a>)</p></li>
@@ -986,9 +1017,9 @@
 <li><p><code><a href="../reference/remote-reexports.html">install_github()</a></code> now takes repo names of the form <code>[username/]repo[/subdir][@ref|#pull]</code> - this is now the recommended form to specify username, subdir, ref and/or pull for install_github. (Thanks to Kirill Müller, <a href='https://github.com/r-lib/devtools/issues/376'>#376</a>)</p></li>
 </ul>
 </div>
-    <div id="devtools-1-4" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-4" class="anchor"></a>devtools 1.4<small> 2013-11-20 </small>
+    <div id="devtools-14" class="section level1">
+<h1 class="page-header" data-toc-text="1.4">
+<a href="#devtools-14" class="anchor"></a>devtools 1.4<small> 2013-11-20 </small>
 </h1>
 <div id="installation-improvements" class="section level2">
 <h2 class="hasAnchor">
@@ -1022,9 +1053,9 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-1-3" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-3" class="anchor"></a>devtools 1.3<small> 2013-07-04 </small>
+    <div id="devtools-13" class="section level1">
+<h1 class="page-header" data-toc-text="1.3">
+<a href="#devtools-13" class="anchor"></a>devtools 1.3<small> 2013-07-04 </small>
 </h1>
 <div id="changes-to-best-practices" class="section level2">
 <h2 class="hasAnchor">
@@ -1067,16 +1098,16 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-1-2" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-2" class="anchor"></a>devtools 1.2<small> 2013-04-17 </small>
+    <div id="devtools-12" class="section level1">
+<h1 class="page-header" data-toc-text="1.2">
+<a href="#devtools-12" class="anchor"></a>devtools 1.2<small> 2013-04-17 </small>
 </h1>
 <div id="better-installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#better-installation" class="anchor"></a>Better installation</h2>
 <ul>
 <li><p><code>install</code> gains a <code>local</code> option for installing the package from the local package directory, rather than from a built tar.gz. This is now used by default for all package installations. If you want to guarantee a clean build, run <code>local = FALSE</code></p></li>
-<li><p><code>install</code> now uses option <code>devtools.install.args</code> for default installation arguments. This allows you to set any useful defaults (e.g. <code>--no-multiarch</code>) in your Rprofile.</p></li>
+<li><p><code>install</code> now uses option <code>devtools.install.args</code> for default installation arguments. This allows you to set any useful defaults (e.g. <code>--no-multiarch</code>) in your Rprofile.</p></li>
 <li><p><code>install_git</code> gains <code>branch</code> argument to specify branch or tag (Fixes <a href='https://github.com/r-lib/devtools/issues/255'>#255</a>)</p></li>
 </ul>
 </div>
@@ -1116,9 +1147,9 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-1-1" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-1" class="anchor"></a>devtools 1.1<small> 2013-02-09 </small>
+    <div id="devtools-11" class="section level1">
+<h1 class="page-header" data-toc-text="1.1">
+<a href="#devtools-11" class="anchor"></a>devtools 1.1<small> 2013-02-09 </small>
 </h1>
 <ul>
 <li><p><code><a href="../reference/source_gist.html">source_gist()</a></code> has been updated to accept new gist URLs with username. (Fixes <a href='https://github.com/r-lib/devtools/issues/247'>#247</a>)</p></li>
@@ -1127,16 +1158,16 @@
 <li><p>Catch additional case in <code><a href="https://rdrr.io/pkg/pkgbuild/man/has_rtools.html">find_rtools()</a></code>: previously installed, but directory empty/deleted (Fixes <a href='https://github.com/r-lib/devtools/issues/241'>#241</a>)</p></li>
 </ul>
 </div>
-    <div id="devtools-1-0" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-1-0" class="anchor"></a>devtools 1.0<small> 2013-01-22 </small>
+    <div id="devtools-10" class="section level1">
+<h1 class="page-header" data-toc-text="1.0">
+<a href="#devtools-10" class="anchor"></a>devtools 1.0<small> 2013-01-22 </small>
 </h1>
 <div id="improvements-to-package-loading" class="section level2">
 <h2 class="hasAnchor">
 <a href="#improvements-to-package-loading" class="anchor"></a>Improvements to package loading</h2>
 <ul>
 <li><p>Rcpp attributes are now automatically compiled during build.</p></li>
-<li><p>Packages listed in depends are <code><a href="https://rdrr.io/r/base/library.html">require()</a></code>d (Fixes <a href='https://github.com/r-lib/devtools/issues/161'>#161</a>, <a href='https://github.com/r-lib/devtools/issues/178'>#178</a>, <a href='https://github.com/r-lib/devtools/issues/192'>#192</a>)</p></li>
+<li><p>Packages listed in depends are <code>require()</code>d (Fixes <a href='https://github.com/r-lib/devtools/issues/161'>#161</a>, <a href='https://github.com/r-lib/devtools/issues/178'>#178</a>, <a href='https://github.com/r-lib/devtools/issues/192'>#192</a>)</p></li>
 <li><p><code>load_all</code> inserts a special version of <code>system.file</code> into the package’s imports environment. This tries to simulate the behavior of <code><a href="https://rdrr.io/r/base/system.file.html">base::system.file</a></code> but gives modified results because the directory structure of installed packages and uninstalled source packages is different. (Fixes <a href='https://github.com/r-lib/devtools/issues/179'>#179</a>). In other words, <code>system.file</code> should now just work even if the package is loaded with devtools.</p></li>
 <li><p>Source files are only recompiled if they’ve changed since the last run, and the recompile will be clean (<code>--preclean</code>) if any exported header files have changed. (Closes <a href='https://github.com/r-lib/devtools/issues/224'>#224</a>)</p></li>
 <li><p>The compilation process now performs a mock install instead of using <code>R CMD SHLIB</code>. This means that <code>Makevars</code> and makefiles will now be respected and generally there should be fewer mismatches between <code>load_all</code> and the regular install and reload process.</p></li>
@@ -1185,9 +1216,9 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-0-8-0" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-0-8-0" class="anchor"></a>devtools 0.8.0<small> Unreleased </small>
+    <div id="devtools-080" class="section level1">
+<h1 class="page-header" data-toc-text="0.8.0">
+<a href="#devtools-080" class="anchor"></a>devtools 0.8.0<small> Unreleased </small>
 </h1>
 <div id="new-features-7" class="section level2">
 <h2 class="hasAnchor">
@@ -1213,7 +1244,7 @@
 <ul>
 <li><p><code>as.package</code> no longer uses <code>~/.Rpackages</code>.</p></li>
 <li><p><code>as.package</code> provides more informative error messages when path does not exist, isn’t a directory, or doesn’t contain a <code>DESCRIPTION</code> file.</p></li>
-<li><p>New function <code><a href="https://rdrr.io/pkg/pkgload/man/inst.html">inst()</a></code> takes the name of a package and returns the installed path of that package. (Winston Chang. Fixes <a href='https://github.com/r-lib/devtools/issues/130'>#130</a>). This makes it possible to use <code>devtools</code> functions (e.g. <code>unload</code>) with regular installed packages, not just in-development source packages.</p></li>
+<li><p>New function <code><a href="https://rdrr.io/pkg/pkgload/man/inst.html">inst()</a></code> takes the name of a package and returns the installed path of that package. (Winston Chang. Fixes <a href='https://github.com/r-lib/devtools/issues/130'>#130</a>). This makes it possible to use <code>devtools</code> functions (e.g. <code>unload</code>) with regular installed packages, not just in-development source packages.</p></li>
 <li><p>New function <code><a href="../reference/devtest.html">devtest()</a></code> returns paths to an internal testing packages in devtools.</p></li>
 </ul>
 </div>
@@ -1256,18 +1287,18 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-0-7-1" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-0-7-1" class="anchor"></a>devtools 0.7.1<small> 2012-07-02 </small>
+    <div id="devtools-071" class="section level1">
+<h1 class="page-header" data-toc-text="0.7.1">
+<a href="#devtools-071" class="anchor"></a>devtools 0.7.1<small> 2012-07-02 </small>
 </h1>
 <ul>
 <li><p>bump dependency to R 2.15</p></li>
 <li><p><code>load_code</code> now also looks for files ending in <code>.q</code> - this is not recommended, but is needed for some older packages</p></li>
 </ul>
 </div>
-    <div id="devtools-0-7" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-0-7" class="anchor"></a>devtools 0.7<small> 2012-06-19 </small>
+    <div id="devtools-07" class="section level1">
+<h1 class="page-header" data-toc-text="0.7">
+<a href="#devtools-07" class="anchor"></a>devtools 0.7<small> 2012-06-19 </small>
 </h1>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
@@ -1318,9 +1349,9 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-0-6" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-0-6" class="anchor"></a>devtools 0.6<small> 2012-02-28 </small>
+    <div id="devtools-06" class="section level1">
+<h1 class="page-header" data-toc-text="0.6">
+<a href="#devtools-06" class="anchor"></a>devtools 0.6<small> 2012-02-28 </small>
 </h1>
 <div id="new-features-8" class="section level2">
 <h2 class="hasAnchor">
@@ -1368,17 +1399,17 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-0-5-1" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-0-5-1" class="anchor"></a>devtools 0.5.1<small> 2011-12-07 </small>
+    <div id="devtools-051" class="section level1">
+<h1 class="page-header" data-toc-text="0.5.1">
+<a href="#devtools-051" class="anchor"></a>devtools 0.5.1<small> 2011-12-07 </small>
 </h1>
 <ul>
 <li>Fix error in that was causing R commands to fail on windows.</li>
 </ul>
 </div>
-    <div id="devtools-0-5" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-0-5" class="anchor"></a>devtools 0.5<small> 2011-12-04 </small>
+    <div id="devtools-05" class="section level1">
+<h1 class="page-header" data-toc-text="0.5">
+<a href="#devtools-05" class="anchor"></a>devtools 0.5<small> 2011-12-04 </small>
 </h1>
 <div id="new-functions" class="section level2">
 <h2 class="hasAnchor">
@@ -1397,9 +1428,9 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-0-4" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-0-4" class="anchor"></a>devtools 0.4<small> 2011-07-23 </small>
+    <div id="devtools-04" class="section level1">
+<h1 class="page-header" data-toc-text="0.4">
+<a href="#devtools-04" class="anchor"></a>devtools 0.4<small> 2011-07-23 </small>
 </h1>
 <div id="new-functions-1" class="section level2">
 <h2 class="hasAnchor">
@@ -1427,9 +1458,9 @@
 </ul>
 </div>
 </div>
-    <div id="devtools-0-3" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-0-3" class="anchor"></a>devtools 0.3<small> 2011-06-30 </small>
+    <div id="devtools-03" class="section level1">
+<h1 class="page-header" data-toc-text="0.3">
+<a href="#devtools-03" class="anchor"></a>devtools 0.3<small> 2011-06-30 </small>
 </h1>
 <ul>
 <li><p>new <code><a href="../reference/bash.html">bash()</a></code> function that starts bash shell in package directory. Useful if you want to use git etc.</p></li>
@@ -1439,9 +1470,9 @@
 <li><p><code>build</code>, <code>install</code>, <code>check</code> and <code>release</code> better about cleaning up after themselves - always try to both work in session temporary directory and delete any files/directories that they create</p></li>
 </ul>
 </div>
-    <div id="devtools-0-2" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-0-2" class="anchor"></a>devtools 0.2<small> 2011-06-29 </small>
+    <div id="devtools-02" class="section level1">
+<h1 class="page-header" data-toc-text="0.2">
+<a href="#devtools-02" class="anchor"></a>devtools 0.2<small> 2011-06-29 </small>
 </h1>
 <ul>
 <li><p><code>install_github</code> now uses <code>RCurl</code> instead of external <code>wget</code> to retrieve package. This should make it more robust wrt external dependencies.</p></li>
@@ -1450,9 +1481,9 @@
 <li><p>Quote the path to R so it works even if there are spaces in the path.</p></li>
 </ul>
 </div>
-    <div id="devtools-0-1" class="section level1">
-<h1 class="page-header">
-<a href="#devtools-0-1" class="anchor"></a>devtools 0.1<small> 2011-06-22 </small>
+    <div id="devtools-01" class="section level1">
+<h1 class="page-header" data-toc-text="0.1">
+<a href="#devtools-01" class="anchor"></a>devtools 0.1<small> 2011-06-22 </small>
 </h1>
 <ul>
 <li><p>Check for presence of <code>DESCRIPTION</code> when loading packages to avoid false positives</p></li>
@@ -1463,51 +1494,10 @@
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#devtools-development-version">development version</a></li>
-        <li><a href="#devtools-2-2-1">2.2.1</a></li>
-        <li><a href="#devtools-2-2-0">2.2.0</a></li>
-        <li><a href="#devtools-2-1-0">2.1.0</a></li>
-        <li><a href="#devtools-2-0-2">2.0.2</a></li>
-        <li><a href="#devtools-2-0-1">2.0.1</a></li>
-        <li><a href="#devtools-2-0-0">2.0.0</a></li>
-        <li><a href="#devtools-1-13-5">1.13.5</a></li>
-        <li><a href="#devtools-1-13-4">1.13.4</a></li>
-        <li><a href="#devtools-1-13-3">1.13.3</a></li>
-        <li><a href="#devtools-1-13-2">1.13.2</a></li>
-        <li><a href="#devtools-1-13-1">1.13.1</a></li>
-        <li><a href="#devtools-1-13-0">1.13.0</a></li>
-        <li><a href="#devtools-1-12-0">1.12.0</a></li>
-        <li><a href="#devtools-1-11-1">1.11.1</a></li>
-        <li><a href="#devtools-1-11-0">1.11.0</a></li>
-        <li><a href="#devtools-1-10-0">1.10.0</a></li>
-        <li><a href="#devtools-1-9-1">1.9.1</a></li>
-        <li><a href="#devtools-1-8-0">1.8.0</a></li>
-        <li><a href="#devtools-1-7-0">1.7.0</a></li>
-        <li><a href="#devtools-1-6-1">1.6.1</a></li>
-        <li><a href="#devtools-1-6">1.6</a></li>
-        <li><a href="#devtools-1-5">1.5</a></li>
-        <li><a href="#devtools-1-4-1">1.4.1</a></li>
-        <li><a href="#devtools-1-4">1.4</a></li>
-        <li><a href="#devtools-1-3">1.3</a></li>
-        <li><a href="#devtools-1-2">1.2</a></li>
-        <li><a href="#devtools-1-1">1.1</a></li>
-        <li><a href="#devtools-1-0">1.0</a></li>
-        <li><a href="#devtools-0-8-0">0.8.0</a></li>
-        <li><a href="#devtools-0-7-1">0.7.1</a></li>
-        <li><a href="#devtools-0-7">0.7</a></li>
-        <li><a href="#devtools-0-6">0.6</a></li>
-        <li><a href="#devtools-0-5-1">0.5.1</a></li>
-        <li><a href="#devtools-0-5">0.5</a></li>
-        <li><a href="#devtools-0-4">0.4</a></li>
-        <li><a href="#devtools-0-3">0.3</a></li>
-        <li><a href="#devtools-0-2">0.2</a></li>
-        <li><a href="#devtools-0-1">0.1</a></li>
-      </ul>
-    </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 
 </div>
@@ -1519,7 +1509,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>
