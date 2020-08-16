@@ -16,7 +16,7 @@
 #' of additional questions to ask.
 #'
 #' You also need to read the CRAN repository policy at
-#' <https://cran.r-project.org/web/packages/policies.html> and make
+#' 'https://cran.r-project.org/web/packages/policies.html' and make
 #' sure you're in line with the policies. `release` tries to automate as
 #' many of polices as possible, but it's impossible to be completely
 #' comprehensive, and they do change in between releases of devtools.
@@ -158,7 +158,7 @@ yesno <- function(...) {
   qs <- c(sample(yeses, 1), sample(nos, 2))
   rand <- sample(length(qs))
 
-  menu(qs[rand]) != which(rand == 1)
+  utils::menu(qs[rand]) != which(rand == 1)
 }
 
 # https://tools.ietf.org/html/rfc2368
@@ -368,8 +368,9 @@ flag_release <- function(pkg = ".") {
   message("Don't forget to tag this release once accepted by CRAN")
 
   date <- Sys.Date()
-  commit <- git2r::commits(git2r::init(pkg$path), n = 1)[[1]]
-  sha <- substr(as.data.frame(commit)$sha, 1, 10)
+  withr::with_dir(pkg$path, {
+    sha <- system2("git", c("rev-parse", "--short", "HEAD"), stdout = TRUE)
+  })
 
   msg <- paste0(
     "This package was submitted to CRAN on ", date, ".\n",
@@ -387,4 +388,16 @@ cran_mirror <- function(repos = getOption("repos")) {
   }
 
   repos[["CRAN"]]
+}
+
+# Return the version of a package on CRAN (or other repository)
+# @param package The name of the package.
+# @param available A matrix of information about packages.
+cran_pkg_version <- function(package, available = available.packages()) {
+  idx <- available[, "Package"] == package
+  if (any(idx)) {
+    as.package_version(available[package, "Version"])
+  } else {
+    NULL
+  }
 }

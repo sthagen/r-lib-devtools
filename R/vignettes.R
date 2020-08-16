@@ -60,7 +60,7 @@ build_vignettes <- function(pkg = ".",
   callr::r(
     build,
     args = list(pkg_path = pkg$path, clean = clean, upgrade = upgrade, quiet = quiet),
-    show = TRUE,
+    show = !quiet,
     spinner = FALSE
   )
 
@@ -120,10 +120,6 @@ clean_vignettes <- function(pkg = ".") {
   }
 
   invisible(TRUE)
-}
-
-ext_variations <- function(path, valid_ext) {
-  unique(c(outer(file_name(path), valid_ext, FUN = paste, sep = ".")))
 }
 
 file_name <- function(x) {
