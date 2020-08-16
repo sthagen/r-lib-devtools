@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Coerce input to a package. — as.package • devtools</title>
+<title>Does a package use testthat? — uses_testthat • devtools</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,12 +46,8 @@
 
 
 
-<meta property="og:title" content="Coerce input to a package. — as.package" />
-<meta property="og:description" content="Possible specifications of package:
-path
-package object
-
-" />
+<meta property="og:title" content="Does a package use testthat? — uses_testthat" />
+<meta property="og:description" content="Does a package use testthat?" />
 <meta property="og:image" content="https://devtools.r-lib.org/logo.svg" />
 
 
@@ -162,35 +158,17 @@ package object
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Coerce input to a package.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/r-lib/devtools/blob/master/R/package.R'><code>R/package.R</code></a></small>
-    <div class="hidden name"><code>as.package.Rd</code></div>
+    <h1>Does a package use testthat?</h1>
+    <small class="dont-index">Source: <a href='https://github.com/r-lib/devtools/blob/master/R/test.R'><code>R/test.R</code></a></small>
+    <div class="hidden name"><code>uses_testthat.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Possible specifications of package:</p><ul>
-<li><p>path</p></li>
-<li><p>package object</p></li>
-</ul>
-
+    <p>Does a package use testthat?</p>
     </div>
 
-    <pre class="usage"><span class='fu'>as.package</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>create</span> <span class='kw'>=</span> <span class='fl'>NA</span>)</pre>
+    <pre class="usage"><span class='fu'>uses_testthat</span>(<span class='kw'>pkg</span> <span class='kw'>=</span> <span class='st'>"."</span>)</pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>x</th>
-      <td><p>object to coerce to a package</p></td>
-    </tr>
-    <tr>
-      <th>create</th>
-      <td><p>only relevant if a package structure does not exist yet: if
-<code>TRUE</code>, create a package structure; if <code>NA</code>, ask the user
-(in interactive mode only)</p></td>
-    </tr>
-    </table>
 
 
   </div>

@@ -28,9 +28,6 @@
     <loc>https://devtools.r-lib.org//reference/check.html</loc>
   </url>
   <url>
-    <loc>https://devtools.r-lib.org//reference/check_failures.html</loc>
-  </url>
-  <url>
     <loc>https://devtools.r-lib.org//reference/check_man.html</loc>
   </url>
   <url>
@@ -53,9 +50,6 @@
   </url>
   <url>
     <loc>https://devtools.r-lib.org//reference/dev_sitrep.html</loc>
-  </url>
-  <url>
-    <loc>https://devtools.r-lib.org//reference/devtest.html</loc>
   </url>
   <url>
     <loc>https://devtools.r-lib.org//reference/devtools-deprecated.html</loc>
@@ -146,6 +140,9 @@
   </url>
   <url>
     <loc>https://devtools.r-lib.org//reference/uninstall.html</loc>
+  </url>
+  <url>
+    <loc>https://devtools.r-lib.org//reference/uses_testthat.html</loc>
   </url>
   <url>
     <loc>https://devtools.r-lib.org//reference/wd.html</loc>

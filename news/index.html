@@ -89,13 +89,19 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">devtools</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.3.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.3.1.9000</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="../index.html">
+    <span class="fas fa fas fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
@@ -106,7 +112,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/dependencies.html">Remote development dependencies</a>
+      <a href="../articles/dependencies.html">Devtools dependencies</a>
     </li>
   </ul>
 </li>
@@ -117,7 +123,7 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li class="dropdown-header">Release notes</li>
+    <li class="dropdown-header">Releases</li>
     <li>
       <a href="https://www.tidyverse.org/articles/2019/09/devtools-2-2-1/">Version 2.2.1</a>
     </li>
@@ -126,7 +132,7 @@
     </li>
     <li class="divider"></li>
     <li>
-      <a href="../news/index.html">Change log</a>
+      <a href="../news/index.html">Changelog</a>
     </li>
   </ul>
 </li>
@@ -159,6 +165,21 @@
 <h1 class="page-header" data-toc-text="development version">
 <a href="#devtools-development-version" class="anchor"></a>devtools (development version)<small> Unreleased </small>
 </h1>
+<ul>
+<li><p>Old <code>check_results()</code> function has been removed. It was not used by any CRAN package, and much better alternatives are available in the<br><a href="http://github.com/r-lib/rcmdcheck">rcmdcheck</a> package.</p></li>
+<li><p>The internal <code>devtest()</code> function has been removed.</p></li>
+<li><p>Now uses (what will become) testthat 3.0.0 to power <code><a href="../reference/test.html">test()</a></code>, <code><a href="../reference/test.html">test_file()</a></code>, <code><a href="../reference/test.html">test_coverage()</a></code>, and <code><a href="../reference/test.html">test_coverage_file()</a></code>. The major difference is that <code><a href="../reference/test.html">test_file()</a></code> now generates a compact summary that takes up less space on the console.</p></li>
+</ul>
+</div>
+    <div id="devtools-231" class="section level1">
+<h1 class="page-header" data-toc-text="2.3.1">
+<a href="#devtools-231" class="anchor"></a>devtools 2.3.1<small> 2020-07-21 </small>
+</h1>
+<ul>
+<li><p><code><a href="../reference/run_examples.html">run_examples()</a></code> arguments <code>run</code> and <code>test</code> are deprecated in favor of the (hopefully) more clear <code>run_dontrun</code> and <code>run_donttest</code> (pkgload/<a href='https://github.com/r-lib/devtools/issues/107'>#107</a>).</p></li>
+<li><p>Previously deprecated functions <code>dr_devtools()</code> and <code>dr_github()</code> have been removed.</p></li>
+<li><p>Documentation has been synced with remotes 2.2.0</p></li>
+</ul>
 </div>
     <div id="devtools-230" class="section level1">
 <h1 class="page-header" data-toc-text="2.3.0">
@@ -209,7 +230,7 @@
 </li>
 <li><p><code><a href="../reference/install.html">install()</a></code> now throws an error when it fails, as intended (<a href='https://github.com/r-lib/devtools/issues/2120'>#2120</a>)</p></li>
 <li><p><code><a href="../reference/install.html">install()</a></code> now again reloads and re-attaches packages if they were previously loaded (<a href='https://github.com/r-lib/devtools/issues/2111'>#2111</a>).</p></li>
-<li><p><code><a href="../reference/release.html">release()</a></code> no longer calls the deprecated <code><a href="../reference/devtools-deprecated.html">dr_devtools()</a></code> (<a href='https://github.com/r-lib/devtools/issues/2105'>#2105</a>)</p></li>
+<li><p><code><a href="../reference/release.html">release()</a></code> no longer calls the deprecated <code>dr_devtools()</code> (<a href='https://github.com/r-lib/devtools/issues/2105'>#2105</a>)</p></li>
 <li><p><code><a href="../reference/test.html">test()</a></code> now explicitly passes <code>stop_on_failure = FALSE</code> to <code><a href="https://testthat.r-lib.org/reference/test_dir.html">testthat::test_dir()</a></code> (<a href='https://github.com/jameslamb'>@jameslamb</a>, <a href='https://github.com/r-lib/devtools/issues/2099'>#2099</a>)</p></li>
 </ul>
 </div>
@@ -222,7 +243,7 @@
 <a href="#new-features" class="anchor"></a>New Features</h2>
 <ul>
 <li><p><code><a href="../reference/create.html">create()</a></code> added back, the RStudio IDE uses <code><a href="../reference/create.html">create()</a></code> in the create packages dialog, so removing it in version 2.1.0 broke old versions of the IDE.</p></li>
-<li><p>New <code><a href="../reference/dev_sitrep.html">dev_sitrep()</a></code> function to return information about your development environment and diagnose common problems. The former functions <code><a href="../reference/devtools-deprecated.html">dr_devtools()</a></code> and <code><a href="../reference/devtools-deprecated.html">dr_github()</a></code> have been deprecated. (<a href='https://github.com/r-lib/devtools/issues/1970'>#1970</a>)</p></li>
+<li><p>New <code><a href="../reference/dev_sitrep.html">dev_sitrep()</a></code> function to return information about your development environment and diagnose common problems. The former functions <code>dr_devtools()</code> and <code>dr_github()</code> have been deprecated. (<a href='https://github.com/r-lib/devtools/issues/1970'>#1970</a>)</p></li>
 <li><p>All functions taking <code>...</code> now use the ellipsis package. This catches errors when arguments are misspelled or incorrectly specified (<a href='https://github.com/r-lib/devtools/issues/2016'>#2016</a>)</p></li>
 </ul>
 </div>
@@ -739,9 +760,9 @@
 <li><p><code>use_cran_badge()</code> uses canonical url form preferred by CRAN.</p></li>
 <li><p><code>use_data()</code> also works with data from the parent frame (<a href='https://github.com/r-lib/devtools/issues/829'>#829</a>, <a href='https://github.com/krlmlr'>@krlmlr</a>).</p></li>
 <li><p><code>use_git_hook()</code> now creates <code>.git/hooks</code> if needed (<a href='https://github.com/r-lib/devtools/issues/888'>#888</a>)</p></li>
-<li><p>GitHub integration extended: <code>use_github()</code> gains a <code>protocol</code> argument (ssh or https), populates URL and BugReports fields of DESCRIPTION (only if non-existent or empty), pushes to the newly created GitHub repo, and sets a remote tracking branch. <code>use_github_links()</code> is a new exported function. <code><a href="../reference/devtools-deprecated.html">dr_github()</a></code> diagnoses more possible problems. (<a href='https://github.com/r-lib/devtools/issues/642'>#642</a>, <a href='https://github.com/jennybc'>@jennybc</a>).</p></li>
+<li><p>GitHub integration extended: <code>use_github()</code> gains a <code>protocol</code> argument (ssh or https), populates URL and BugReports fields of DESCRIPTION (only if non-existent or empty), pushes to the newly created GitHub repo, and sets a remote tracking branch. <code>use_github_links()</code> is a new exported function. <code>dr_github()</code> diagnoses more possible problems. (<a href='https://github.com/r-lib/devtools/issues/642'>#642</a>, <a href='https://github.com/jennybc'>@jennybc</a>).</p></li>
 <li><p><code>use_travis()</code>: Default travis script leaves notifications on default settings.</p></li>
-<li><p><code><a href="../reference/test.html">uses_testthat()</a></code> and <code><a href="../reference/check_failures.html">check_failures()</a></code> are now exported (<a href='https://github.com/r-lib/devtools/issues/824'>#824</a>, <a href='https://github.com/r-lib/devtools/issues/839'>#839</a>, <a href='https://github.com/krlmlr'>@krlmlr</a>).</p></li>
+<li><p><code><a href="../reference/uses_testthat.html">uses_testthat()</a></code> and <code>check_failures()</code> are now exported (<a href='https://github.com/r-lib/devtools/issues/824'>#824</a>, <a href='https://github.com/r-lib/devtools/issues/839'>#839</a>, <a href='https://github.com/krlmlr'>@krlmlr</a>).</p></li>
 <li><p><code>use_readme_rmd()</code> uses <code>uses_git()</code> correctly (<a href='https://github.com/r-lib/devtools/issues/793'>#793</a>).</p></li>
 <li><p><code><a href="https://rdrr.io/pkg/pkgbuild/man/with_debug.html">with_debug()</a></code> now uses <code>with_makevars()</code> rather than <code>with_env()</code>, because R reads compilation variables from the Makevars rather than the environment (<a href='https://github.com/jimhester'>@jimhester</a>, <a href='https://github.com/r-lib/devtools/issues/788'>#788</a>).</p></li>
 <li><p>Properly reset library path after <code>with_lib()</code> (<a href='https://github.com/r-lib/devtools/issues/836'>#836</a>, <a href='https://github.com/krlmlr'>@krlmlr</a>).</p></li>
@@ -757,7 +778,7 @@
 <h2 class="hasAnchor">
 <a href="#helpers" class="anchor"></a>Helpers</h2>
 <ul>
-<li><p>New <code><a href="../reference/devtools-deprecated.html">dr_devtools()</a></code> runs some common diagnostics: are you using the latest version of R and devtools? It is run automatically by <code><a href="../reference/release.html">release()</a></code> (<a href='https://github.com/r-lib/devtools/issues/592'>#592</a>).</p></li>
+<li><p>New <code>dr_devtools()</code> runs some common diagnostics: are you using the latest version of R and devtools? It is run automatically by <code><a href="../reference/release.html">release()</a></code> (<a href='https://github.com/r-lib/devtools/issues/592'>#592</a>).</p></li>
 <li><p><code>use_code_of_conduct()</code> adds a contributor code of conduct from <a href="http://contributor-covenant.org" class="uri">http://contributor-covenant.org</a>. (<a href='https://github.com/r-lib/devtools/issues/729'>#729</a>)</p></li>
 <li><p><code>use_coveralls()</code> allows you to easily add test coverage with coveralls (<a href='https://github.com/jimhester'>@jimhester</a>, <a href='https://github.com/r-lib/devtools/issues/680'>#680</a>, <a href='https://github.com/r-lib/devtools/issues/681'>#681</a>).</p></li>
 <li><p><code>use_git()</code> sets up a package to use git, initialising the repo and checking the existing files.</p></li>
@@ -781,7 +802,7 @@
 <a href="#git-and-github" class="anchor"></a>Git and github</h2>
 <ul>
 <li><p>Devtools now uses the git2r package to inspect git properties and install remote git packages with <code><a href="../reference/remote-reexports.html">install_git()</a></code>. This should be considerably more reliable than the previous strategy which involves calling the command line <code>git</code> client. It has two small downsides: <code><a href="../reference/remote-reexports.html">install_git()</a></code> no longer accepts additional <code>args</code>, and must do a deep clone when installing.</p></li>
-<li><p><code><a href="../reference/devtools-deprecated.html">dr_github()</a></code> checks for common problems with git/github setup (<a href='https://github.com/r-lib/devtools/issues/643'>#643</a>).</p></li>
+<li><p><code>dr_github()</code> checks for common problems with git/github setup (<a href='https://github.com/r-lib/devtools/issues/643'>#643</a>).</p></li>
 <li><p>If you use git, <code><a href="../reference/release.html">release()</a></code> now warns you if you have uncommited changes, or if you’ve forgotten to synchronise with the remote (<a href='https://github.com/r-lib/devtools/issues/691'>#691</a>).</p></li>
 <li><p><code><a href="../reference/remote-reexports.html">install_github()</a></code> warns if repository contains submodules (<a href='https://github.com/ashander'>@ashander</a>, <a href='https://github.com/r-lib/devtools/issues/751'>#751</a>).</p></li>
 </ul>
@@ -1245,7 +1266,7 @@
 <li><p><code>as.package</code> no longer uses <code>~/.Rpackages</code>.</p></li>
 <li><p><code>as.package</code> provides more informative error messages when path does not exist, isn’t a directory, or doesn’t contain a <code>DESCRIPTION</code> file.</p></li>
 <li><p>New function <code><a href="https://rdrr.io/pkg/pkgload/man/inst.html">inst()</a></code> takes the name of a package and returns the installed path of that package. (Winston Chang. Fixes <a href='https://github.com/r-lib/devtools/issues/130'>#130</a>). This makes it possible to use <code>devtools</code> functions (e.g. <code>unload</code>) with regular installed packages, not just in-development source packages.</p></li>
-<li><p>New function <code><a href="../reference/devtest.html">devtest()</a></code> returns paths to an internal testing packages in devtools.</p></li>
+<li><p>New function <code>devtest()</code> returns paths to an internal testing packages in devtools.</p></li>
 </ul>
 </div>
 <div id="loading" class="section level2">
@@ -1509,7 +1530,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

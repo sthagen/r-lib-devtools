@@ -89,13 +89,19 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">devtools</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.3.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.3.1.9000</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="../index.html">
+    <span class="fas fa fas fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
@@ -106,7 +112,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/dependencies.html">Remote development dependencies</a>
+      <a href="../articles/dependencies.html">Devtools dependencies</a>
     </li>
   </ul>
 </li>
@@ -117,7 +123,7 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li class="dropdown-header">Release notes</li>
+    <li class="dropdown-header">Releases</li>
     <li>
       <a href="https://www.tidyverse.org/articles/2019/09/devtools-2-2-1/">Version 2.2.1</a>
     </li>
@@ -126,7 +132,7 @@
     </li>
     <li class="divider"></li>
     <li>
-      <a href="../news/index.html">Change log</a>
+      <a href="../news/index.html">Changelog</a>
     </li>
   </ul>
 </li>
@@ -183,36 +189,6 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="check.html">check()</a></code> <code><a href="check.html">check_built()</a></code> </p>
-        </td>
-        <td><p>Build and check a package, cleaning up automatically on success.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="check_failures.html">check_failures()</a></code> </p>
-        </td>
-        <td><p>Parses R CMD check log file for ERRORs, WARNINGs and NOTEs</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="check_man.html">check_man()</a></code> </p>
-        </td>
-        <td><p>Check documentation, as <code>R CMD check</code> does.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="check_rhub.html">check_rhub()</a></code> </p>
-        </td>
-        <td><p>Run CRAN checks for package on R-hub</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="check_win.html">check_win_devel()</a></code> <code><a href="check_win.html">check_win_release()</a></code> <code><a href="check_win.html">check_win_oldrelease()</a></code> </p>
-        </td>
-        <td><p>Build windows binary package.</p></td>
-      </tr><tr>
-        
-        <td>
           <p><code><a href="build_manual.html">build_manual()</a></code> </p>
         </td>
         <td><p>Create package pdf manual</p></td>
@@ -237,9 +213,27 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="document.html">document()</a></code> </p>
+          <p><code><a href="check.html">check()</a></code> <code><a href="check.html">check_built()</a></code> </p>
         </td>
-        <td><p>Use roxygen to document a package.</p></td>
+        <td><p>Build and check a package, cleaning up automatically on success.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="check_man.html">check_man()</a></code> </p>
+        </td>
+        <td><p>Check documentation, as <code>R CMD check</code> does.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="check_rhub.html">check_rhub()</a></code> </p>
+        </td>
+        <td><p>Run CRAN checks for package on R-hub</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="check_win.html">check_win_devel()</a></code> <code><a href="check_win.html">check_win_release()</a></code> <code><a href="check_win.html">check_win_oldrelease()</a></code> </p>
+        </td>
+        <td><p>Build windows binary package.</p></td>
       </tr><tr>
         
         <td>
@@ -249,21 +243,15 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="document.html">document()</a></code> </p>
+        </td>
+        <td><p>Use roxygen to document a package.</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="load_all.html">load_all()</a></code> </p>
         </td>
         <td><p>Load complete package.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="package_file.html">package_file()</a></code> </p>
-        </td>
-        <td><p>Find file in a package.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="devtools.html">devtools</a></code> </p>
-        </td>
-        <td><p>Package development tools for R.</p></td>
       </tr><tr>
         
         <td>
@@ -279,21 +267,15 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="revdep.html">revdep()</a></code> <code><a href="revdep.html">revdep_maintainers()</a></code> </p>
-        </td>
-        <td><p>Reverse dependency tools.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="test.html">test()</a></code> <code><a href="test.html">test_coverage()</a></code> <code><a href="test.html">uses_testthat()</a></code> <code><a href="test.html">test_file()</a></code> <code><a href="test.html">test_coverage_file()</a></code> </p>
-        </td>
-        <td><p>Execute <span class="pkg">test_that</span> tests in a package.</p></td>
-      </tr><tr>
-        
-        <td>
           <p><code><a href="spell_check.html">spell_check()</a></code> </p>
         </td>
         <td><p>Spell checking</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="test.html">test()</a></code> <code><a href="test.html">test_file()</a></code> <code><a href="test.html">test_coverage()</a></code> <code><a href="test.html">test_coverage_file()</a></code> </p>
+        </td>
+        <td><p>Execute testthat tests in a package</p></td>
       </tr>
     </tbody><tbody>
       <tr>
@@ -441,7 +423,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>
