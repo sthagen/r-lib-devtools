@@ -1,5 +1,9 @@
 # devtools (development version)
 
+* `check()` only re-documents if you have a matching version of roxygen2
+   (#2263).
+* `run_examples(fresh = TRUE)` again works without error (#2264)
+
 * `pkgload::inst()` is no longer re-exported (#2218).
 
 * Old `check_results()` function has been removed. It was not used by any
@@ -14,6 +18,9 @@
    the console.
 
 # devtools 2.3.1
+
+* `check_win_*()` function now resets the email to the original email after
+  execution, this bug was fixed and crept back in (@muschellij2, #2152).
 
 * `run_examples()` arguments `run` and `test` are deprecated in favor of the (hopefully) more clear `run_dontrun` and `run_donttest` (pkgload/#107).
 
