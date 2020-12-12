@@ -187,19 +187,19 @@ shortcut for <code><a href='http://covr.r-lib.org/reference/file_coverage.html'>
 
     </div>
 
-    <pre class="usage"><span class='fu'>test</span>(<span class='kw'>pkg</span> <span class='kw'>=</span> <span class='st'>"."</span>, <span class='kw'>filter</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>stop_on_failure</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>export_all</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)
+    <pre class="usage"><span class='fu'>test</span><span class='op'>(</span>pkg <span class='op'>=</span> <span class='st'>"."</span>, filter <span class='op'>=</span> <span class='cn'>NULL</span>, stop_on_failure <span class='op'>=</span> <span class='cn'>FALSE</span>, export_all <span class='op'>=</span> <span class='cn'>TRUE</span>, <span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>test_file</span>(<span class='kw'>file</span> <span class='kw'>=</span> <span class='fu'>find_active_file</span>(), <span class='no'>...</span>)
+<span class='fu'>test_file</span><span class='op'>(</span>file <span class='op'>=</span> <span class='fu'>find_active_file</span><span class='op'>(</span><span class='op'>)</span>, <span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>test_coverage</span>(<span class='kw'>pkg</span> <span class='kw'>=</span> <span class='st'>"."</span>, <span class='kw'>show_report</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>(), <span class='no'>...</span>)
+<span class='fu'>test_coverage</span><span class='op'>(</span>pkg <span class='op'>=</span> <span class='st'>"."</span>, show_report <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span><span class='op'>(</span><span class='op'>)</span>, <span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>test_coverage_file</span>(
-  <span class='kw'>file</span> <span class='kw'>=</span> <span class='fu'>find_active_file</span>(),
-  <span class='kw'>filter</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='kw'>show_report</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>(),
-  <span class='kw'>export_all</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='no'>...</span>
-)</pre>
+<span class='fu'>test_coverage_file</span><span class='op'>(</span>
+  file <span class='op'>=</span> <span class='fu'>find_active_file</span><span class='op'>(</span><span class='op'>)</span>,
+  filter <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  show_report <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span><span class='op'>(</span><span class='op'>)</span>,
+  export_all <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  <span class='va'>...</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -212,16 +212,12 @@ package object.  See <code><a href='as.package.html'>as.package()</a></code> for
     <tr>
       <th>filter</th>
       <td><p>If not <code>NULL</code>, only tests with file names matching this
-regular expression will be executed. Matching be performed on the file
-name after it has been stripped of <code>"test-"</code> and <code>".R"</code>.</p></td>
+regular expression will be executed. Matching is performed on the file
+name after it's stripped of <code>"test-"</code> and <code>".R"</code>.</p></td>
     </tr>
     <tr>
       <th>stop_on_failure</th>
-      <td><p>If <code>TRUE</code>, throw an error if any tests fail.</p>
-<p>For historical reasons, the default value of <code>stop_on_failure</code> is <code>TRUE</code>
-for  <code>test_package()</code> and <code>test_check()</code> but <code>FALSE</code> for <code>test_dir()</code>, so
-if you're calling <code>test_dir()</code> you may want to consider explicitly setting
-<code>stop_on_failure = TRUE</code>.</p></td>
+      <td><p>If <code>TRUE</code>, throw an error if any tests fail.</p></td>
     </tr>
     <tr>
       <th>export_all</th>
@@ -261,7 +257,7 @@ in RStudio (if available).</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
