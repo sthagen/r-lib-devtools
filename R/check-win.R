@@ -72,7 +72,9 @@ check_win <- function(pkg = ".", version = c("R-devel", "R-release", "R-oldrelea
       "Building windows version of {.pkg {pkg$package}} ({pkg$version})",
       " for {paste(version, collapse = ', ')} with win-builder.r-project.org."
     )
-    if (interactive() && yesno("Email results to ", maintainer(pkg)$email, "?")) {
+
+    email <- cli::style_bold(maintainer(pkg)$email)
+    if (interactive() && yesno("Email results to ", email, "?")) {
       return(invisible())
     }
   }
@@ -115,6 +117,10 @@ change_maintainer_email <- function(desc, email) {
   aut[is_maintainer]$email <- email
 
   desc$set_authors(aut)
+  ## Check if the email is actually changed before we actually send the email
+  if(!grepl(email, desc$get_maintainer())){
+    stop("Changing maintainer email failed. Possible reason is using both Authors@R and Maintainer fields in the DESCRIPTION file.", call. = FALSE)
+  }
 
   desc$write()
 }
