@@ -1,5 +1,8 @@
 # devtools (development version)
 
+* DT has been moved from Imports to Suggests. DT is only needed when running
+  `test_coverage()` so now you'll be prompted to install it when needed.
+
 * Make the `.gitignore` entries automatically created by `build_vignettes` more
   specific. (@klmr, #2317)
 
@@ -22,6 +25,9 @@
   `test_coverage()`, and `test_coverage_file()`. The major difference is that
   `test_file()` now generates a compact summary that takes up less space on
    the console.
+# devtools 2.3.2
+
+* Fix for compatibility with withr 2.3.0
 
 # devtools 2.3.1
 
