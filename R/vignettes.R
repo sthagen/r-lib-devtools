@@ -40,6 +40,7 @@ build_vignettes <- function(
     return(invisible())
   }
 
+  check_installed("remotes")
   deps <- remotes::dev_package_deps(pkg$path, dependencies)
   update(deps, upgrade = upgrade)
 
@@ -128,7 +129,7 @@ clean_vignettes <- function(pkg = ".") {
 }
 
 dir_delete_if_empty <- function(x) {
-  if (dir_exists(x) && rlang::is_empty(dir_ls(x))) {
+  if (dir_exists(x) && is_empty(dir_ls(x))) {
     dir_delete(x)
     cli::cli_inform(c(x = "Removing {.file {path_file(x)}}"))
   }
