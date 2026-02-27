@@ -33,7 +33,7 @@ air format .
 
 ### Coding
 
-* Always run `air format .` after generating code
+* Always run air format . after generating code. If the binary of air is not on the PATH, you can probably find it inside the Air extension used by Positron, e.g. something like ~/.positron/extensions/posit.air-vscode-X.Y.Z/bundled/bin/air.
 * Use the base pipe operator (`|>`) not the magrittr pipe (`%>%`)
 * Don't use `_$x` or `_$[["x"]]` since this package must work on R 4.1.
 * Use `\() ...` for single-line anonymous functions. For all other cases, use `function() {...}` 
