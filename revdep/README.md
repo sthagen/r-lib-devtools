@@ -1,12 +1,11 @@
 # Revdeps
 
-## Failed to check (4)
+## Failed to check (3)
 
 |package     |version |error |warning |note |
 |:-----------|:-------|:-----|:-------|:----|
 |caugi       |1.0.0   |1     |        |     |
 |ClustAssess |?       |      |        |     |
-|ctsem       |3.10.6  |1     |        |     |
 |streamDAG   |?       |      |        |     |
 
 ## New problems (4)

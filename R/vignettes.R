@@ -15,8 +15,7 @@
 #'   vignettes.
 #' @param keep_md If `TRUE`, move md intermediates as well as rendered
 #'   outputs. Most useful when using the `keep_md` YAML option for Rmarkdown
-#'   outputs. See
-#'   <https://bookdown.org/yihui/rmarkdown/html-document.html#keeping-markdown>.
+#'   outputs.
 #' @inheritParams tools::buildVignettes
 #' @inheritParams remotes::install_deps
 #' @importFrom stats update

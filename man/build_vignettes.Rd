@@ -54,8 +54,7 @@ vignettes.}
 
 \item{keep_md}{If \code{TRUE}, move md intermediates as well as rendered
 outputs. Most useful when using the \code{keep_md} YAML option for Rmarkdown
-outputs. See
-\url{https://bookdown.org/yihui/rmarkdown/html-document.html#keeping-markdown}.}
+outputs.}
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}

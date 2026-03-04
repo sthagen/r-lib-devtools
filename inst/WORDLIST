@@ -12,6 +12,7 @@ Chun
 Coallier
 Codecov
 DT
+Deprecations
 ERRORs
 Fong
 GitLab
@@ -53,7 +54,6 @@ SHA
 Studer
 Takahashi
 Titov
-UI
 UNC
 VignetteBuilder
 WARNINGs
@@ -99,7 +99,6 @@ hadley
 http
 https
 httr
-httr2
 hunspell
 importFrom
 initialising
@@ -120,8 +119,6 @@ md
 miniUI
 mnel
 nchar
-pak
-objs
 pak
 pandoc
 param
@@ -170,6 +167,7 @@ un
 uncommited
 urlchecker
 usethis
+webform
 withr
 wordlists
 xxxx

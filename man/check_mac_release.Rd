@@ -45,7 +45,7 @@ The url with the check results (invisibly)
 }
 \description{
 Check on either the released or development versions of R, using
-\url{https://mac.r-project.org/macbuilder/}.
+\url{https://mac.r-project.org/macbuilder/submit.html}.
 }
 \seealso{
 Other build functions: 
