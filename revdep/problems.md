@@ -165,3 +165,4 @@ Run `revdepcheck::cloud_details(, "srcpkgs")` for more info
      Error: Vignette re-building failed.
      Execution halted
      ```
+
