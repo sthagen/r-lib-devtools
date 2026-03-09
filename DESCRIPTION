@@ -21,7 +21,7 @@ Imports:
     cli (>= 3.6.5),
     desc (>= 1.4.3),
     ellipsis (>= 0.3.2),
-    fs (>= 1.6.6),
+    fs (>= 1.6.7),
     lifecycle (>= 1.0.5),
     memoise (>= 2.0.1),
     miniUI (>= 0.1.2),
