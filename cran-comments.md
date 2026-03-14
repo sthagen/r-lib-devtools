@@ -8,6 +8,11 @@ We checked 549 reverse dependencies, comparing R CMD check results across CRAN a
 Issues with CRAN packages are summarised below.
 
 ### New problems
+
+All maintainers were alerted to this breakage >2 weeks ago.
+
+It is all related to devtools deprecating its `install_*()` functions, in favor direct use of pak.
+
 (This reports the first line of each new failure)
 
 * ggtaxplot
