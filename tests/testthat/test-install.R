@@ -21,6 +21,38 @@ test_that("install reports stages", {
   )
 })
 
+test_that("install() doesn't reinstall deps that are already installed", {
+  skip_on_cran()
+
+  pkg <- local_package_copy(test_path("testInstallWithDeps"))
+
+  # Install cli into a temp lib via pak, to make extra sure that
+  # pak considers it already satisfied when install() runs.
+  withr::local_temp_libpaths()
+
+  # It's very hard to silence pak.
+  local({
+    withr::local_output_sink(withr::local_tempfile())
+    withr::local_message_sink(withr::local_tempfile())
+    withCallingHandlers(
+      pak::pkg_install("cli", lib = .libPaths()[1], ask = FALSE),
+      callr_message = function(cnd) tryInvokeRestart("muffleMessage")
+    )
+  })
+
+  # Prepend a second temp lib in which to install the in-development package.
+  withr::local_temp_libpaths()
+  tmp_lib <- .libPaths()[1]
+
+  install(pkg, reload = FALSE, build = FALSE, quiet = TRUE)
+
+  installed <- setdiff(
+    fs::path_file(fs::dir_ls(tmp_lib, type = "directory")),
+    "_cache"
+  )
+  expect_equal(installed, "testInstallWithDeps")
+})
+
 test_that("vignettes built on install", {
   skip_on_cran()
 
